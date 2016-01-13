@@ -3,7 +3,7 @@ require 'io/console'
 module SSHKit
   module Backend
 
-    class Netssh < Printer
+    class Netssh < Abstract
       def sudo(*args)
         _execute!(:sudo, *args).success?
       end
